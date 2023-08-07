@@ -4,31 +4,37 @@ import java.util.List;
 import java.util.Scanner;
 
 public class BubbleSort {
-    
-    public static void bubbleSort(List<Integer> nums){
-        for(int i=0;i<nums.size()-1;i++){
-            for(int j=0;j<nums.size()-1;j++){
-                if(nums.get(j)>nums.get(j+1)){
-                    Collections.swap(nums, j, j+1);
+    private static void swap(int[] array, int pos1, int pos2){
+        int temp = array[pos1];
+        array[pos1] = array[pos2];
+        array[pos2] = temp;
+    }
+
+    private static void bubbleSort(int[] array){
+        for(int i=0;i<array.length-1;i++){
+            for(int j=0;j<array.length-1;j++){
+                if(array[j]>array[j+1]){
+                    swap(array,j,j+1);
                 }
             }
         }
     }
 
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int sizeOfInput = sc.nextInt();
-        List<Integer> input = new ArrayList<Integer>(sizeOfInput);
+        Scanner scanner = new Scanner(System.in);
+        int sizeOfInputArray = scanner.nextInt();
+        int[] inputArray = new int[sizeOfInputArray];
 
-        for(int i=0;i<sizeOfInput;i++){
-            input.add(sc.nextInt());
+        for(int i=0;i<sizeOfInputArray;i++){
+            inputArray[i] = scanner.nextInt();
         }
-        sc.close();
+        scanner.close();
 
-        bubbleSort(input);
+        bubbleSort(inputArray);
 
-        for(int i=0;i<sizeOfInput;i++){
-            System.out.print(input.get(i)+" ");
+        System.out.print("Sorted: ");
+        for(int i=0;i<sizeOfInputArray;i++){
+            System.out.print(inputArray[i]+" ");
         }
     }
 }

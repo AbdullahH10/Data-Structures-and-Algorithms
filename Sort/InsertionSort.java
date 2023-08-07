@@ -1,32 +1,32 @@
 import java.util.Scanner;
 
 public class InsertionSort {
-    public static void insertionSort(int[] nums){
-        for(int i=1;i<nums.length;i++){
-            int toBeSorted = nums[i];
+    public static void insertionSort(int[] array){
+        for(int i=1;i<array.length;i++){
+            int toBeSorted = array[i];
             int j=i-1;
-            while(j>=0 && nums[j]>toBeSorted){
-                nums[j+1]=nums[j];
+            while(j>=0 && array[j]>toBeSorted){
+                array[j+1]=array[j];
                 j--;
             }
-
-            nums[j+1]=toBeSorted;
+            array[j+1]=toBeSorted;
         }
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int sizeOfInput = sc.nextInt();
-        int[] input = new int[sizeOfInput];
+        Scanner scanner = new Scanner(System.in);
+        int sizeOfInputArray = scanner.nextInt();
+        int[] input = new int[sizeOfInputArray];
 
-        for(int i=0;i<sizeOfInput;i++){
-            input[i] = sc.nextInt();
+        for(int i=0;i<sizeOfInputArray;i++){
+            input[i] = scanner.nextInt();
         }
-        sc.close();
+        scanner.close();
 
         insertionSort(input);
 
-        for(int i=0;i<sizeOfInput;i++){
+        System.out.print("Sorted: ");
+        for(int i=0;i<sizeOfInputArray;i++){
             System.out.print(input[i]+" ");
         }
     }

@@ -6,42 +6,48 @@ Algorithm:
     2. Find minimum element from (n-l) elements and store value in  cur_min
     3. If nums[l] is greater than cur_min swap
 */
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class SelectionSort {
-    public static void selectionSort(List<Integer> nums){
-        for(int l=0;l<nums.size()-2;l++){
-            int i=l+1;
-            int cur_min=Integer.MAX_VALUE;
-            while(i<nums.size()){
-                if(nums.get(i)<cur_min){
-                    cur_min=nums.get(i);
+    private static void swap(int[] array, int pos1, int pos2){
+        int temp = array[pos1];
+        array[pos1] = array[pos2];
+        array[pos2] = temp;
+    }
+
+    public static void selectionSort(int[] array){
+        for(int i=0;i<array.length-1;i++){
+            int selectedValueFromTheArray = array[i];
+            int indexOfSelectedValueFromTheArray = i;
+            int minimumValueFromRestOfTheArray = Integer.MAX_VALUE;
+            int indexOfMinimumValueFromRestOfTheArray = -1;
+            for(int j=i+1;j<array.length;j++){
+                if(array[j] < minimumValueFromRestOfTheArray) {
+                    minimumValueFromRestOfTheArray = array[j];
+                    indexOfMinimumValueFromRestOfTheArray = j;
                 }
-                i++;
             }
-            if(nums.get(l)>cur_min){
-                Collections.swap(nums, l, nums.indexOf(cur_min));
+            if(minimumValueFromRestOfTheArray<selectedValueFromTheArray){
+                swap(array,indexOfSelectedValueFromTheArray,indexOfMinimumValueFromRestOfTheArray);
             }
         }
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int sizeOfInput = sc.nextInt();
-        List<Integer> input = new ArrayList<>(sizeOfInput);
+        Scanner scanner = new Scanner(System.in);
+        int sizeOfInputArray = scanner.nextInt();
+        int[] inputArray = new int[sizeOfInputArray];
 
-        for(int i=0;i<sizeOfInput;i++){
-            input.add(sc.nextInt());
+        for(int i=0;i<sizeOfInputArray;i++){
+            inputArray[i] = scanner.nextInt();
         }
-        sc.close();
+        scanner.close();
 
-        selectionSort(input);
+        selectionSort(inputArray);
 
-        for(int i=0;i<sizeOfInput;i++){
-            System.out.print(input.get(i)+" ");
+        System.out.print("Sorted: ");
+        for(int i=0;i<sizeOfInputArray;i++){
+            System.out.print(inputArray[i]+" ");
         }
     }
 }
