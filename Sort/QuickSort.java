@@ -1,11 +1,6 @@
-/*
-The randomized quick sort here chooses the pivot randomly thus resulting in O(nlogn) runnning time. If we
-choose left as pivot always then running time will be O(n^2).
-*/
-import java.util.Random;
 import java.util.Scanner;
 
-public class QuickSort {
+public class  QuickSort {
     public static void swap(int[] array,int i,int j){
         int tmp = array[i];
         array[i]= array[j];
@@ -15,30 +10,30 @@ public class QuickSort {
 
     public static void quickSort(int[] nums, int left, int right){
         if(left<right){
-            int curSortedPosition = partition(nums, left, right);
-            quickSort(nums, left, curSortedPosition-1);
-            quickSort(nums, curSortedPosition+1, right);
+            int partitionedPosition = partition(nums, left, right);
+            quickSort(nums, left, partitionedPosition-1);
+            quickSort(nums, partitionedPosition+1, right);
         }
     }
 
     public static int partition(int[] nums, int left, int right){
-        Random random = new Random();
-        //int pivotIndex = left; //when left is always pivot, O(n^2)
-        int pivotIndex = (int)Math.random()*((right+1)-left+1)+left; //when a random index is pivot, O(nlogn)
+        int pivotIndex = (int) (left+(Math.floor((right-left)/2.0)));
         int pivot = nums[pivotIndex];
-        int sortedPos = left;
 
-        for(int i=left+1;i<=right;i++){
-            if(nums[i]<pivot || (nums[i]==pivot && random.nextInt(1000)%2==0)){
-                sortedPos++;
-                swap(nums, i, sortedPos);
-                System.out.print("Swapped : "+sortedPos+" "+i+"\n");
+        int i=left;
+        int j=left-1;
+        while(i<right){
+            if(nums[i]<=pivot){
+                j++;
+                swap(nums,i,j);
+                i++;
+            }
+            else{
+                i++;
             }
         }
-        System.out.print("Sorted Pos: "+sortedPos+"\n");
-        swap(nums, left, sortedPos);
-
-        return sortedPos;
+        swap(nums,j+1,pivotIndex);
+        return j;
     }
 
     public static void main(String[] args) {

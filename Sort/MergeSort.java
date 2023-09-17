@@ -12,8 +12,8 @@ public class MergeSort {
     }
 
     public static void merge(int[] nums,int left,int mid,int right){
-        int cur_length = right-left+1; //current length of nums we are working on
-        int[] mergedArray = new int[cur_length]; //used to merge two part of nums in a sorted manner
+        int curLength = (right-left)+1; //current length of nums we are working on
+        int[] mergedArray = new int[curLength]; //used to merge two part of nums in a sorted manner
         int i=left; //initializing index of left array on nums
         int j=mid+1; //initializing index of right array on nums
         int k=0; //initializing index of merged array
@@ -44,7 +44,7 @@ public class MergeSort {
         }
 
         //copy back to original array nums
-        for(int l=0;l<cur_length;l++){
+        for(int l=0;l<curLength;l++){
             nums[left+l]=mergedArray[l];
         }
     }
