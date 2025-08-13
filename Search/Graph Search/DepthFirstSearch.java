@@ -1,26 +1,41 @@
 import java.util.HashSet;
 import java.util.Stack;
 
-public class DepthFirstSearch {
-    public static class Node {
-        char value;
-        Node[] adjacents;
+class Node {
+    private char value;
+    private Node[] adjacents;
 
-        Node(){}
-        Node(char value){
-            this.value = value;
-        }
-        Node(char value,Node[] adjacents){
-            this.value = value;
-            this.adjacents = adjacents;
-        }
-        
-        public void setAdjacents(Node[] adjacents){
-            this.adjacents = adjacents;
-        }
+    Node() {
     }
 
-    public static void dfs(Node start){
+    Node(char value) {
+        this.value = value;
+    }
+
+    Node(char value, Node[] adjacents) {
+        this.value = value;
+        this.adjacents = adjacents;
+    }
+
+    public void setValue(char value) {
+        this.value = value;
+    }
+
+    public void setAdjacents(Node[] adjacents) {
+        this.adjacents = adjacents;
+    }
+
+    public char getValue() {
+        return this.value;
+    }
+
+    public Node[] getAdjacents() {
+        return this.adjacents;
+    }
+}
+
+class DepthFirstSearch {
+    public boolean search(Node start, char key){
         Stack<Node> stack = new Stack<Node>();
         HashSet<Node> seen = new HashSet<Node>();
 
@@ -30,17 +45,25 @@ public class DepthFirstSearch {
             Node curr = stack.pop();
 
             if(!seen.contains(curr)){
-                System.out.println(curr.value);
+                System.out.println("Seen:"+curr.getValue());
                 seen.add(curr);
+                if(curr.getValue() == key){
+                    return true;
+                }
             }
-            for(Node adjacent:curr.adjacents){
+
+            for(Node adjacent:curr.getAdjacents()){
                 if(!seen.contains(adjacent)){
                     stack.push(adjacent);
                 }
             }
         }
-    }
 
+        return false;
+    }
+}
+
+class Main{
     public static void main(String[] args) {
         Node nodeA = new Node('A');
         Node nodeB = new Node('B');
@@ -68,7 +91,8 @@ public class DepthFirstSearch {
         Node[] adjacentsH = {nodeF,nodeD};
         nodeH.setAdjacents(adjacentsH);
 
-        dfs(nodeA);
+        DepthFirstSearch dfs = new DepthFirstSearch();
+        dfs.search(nodeA,'H');
         return;
     }
 }

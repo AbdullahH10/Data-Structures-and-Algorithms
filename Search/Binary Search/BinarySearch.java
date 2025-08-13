@@ -20,7 +20,6 @@ public class BinarySearch {
 
         while(left<=right){
             long mid =  left + ((right-left)/2);
-
             if(nums.get((int)mid)==key) return nums.indexOf(key);
             else if(key<nums.get((int)mid)) right = mid-1;
             else left = mid+1;
@@ -39,7 +38,6 @@ public class BinarySearch {
 
         while(left<=right){
             long mid =  left + ((right-left)/2);
-
             if(letters.get((int)mid)==key) return letters.indexOf(key);
             else if(key<letters.get((int)mid)) right = mid-1;
             else left = mid+1;
