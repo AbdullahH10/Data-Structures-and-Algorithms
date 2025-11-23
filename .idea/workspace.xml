@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="995aa3b1-07a2-4b77-bb68-70d217e99720" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Data Structures and Algorithms.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/graph.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/graph.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Search/Binary Search/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/algorithms/search-algorithms/binary-search/BinarySearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Search/Graph Search/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/algorithms/search-algorithms/graph-search/breadth-first-search/BreadthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Search/Graph Search/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/algorithms/search-algorithms/graph-search/depth-first-search/DepthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Search/Graph Search/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/algorithms/search-algorithms/graph-search/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Search/Graph Search/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/algorithms/search-algorithms/graph-search/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Search/Graph Search/RecursiveBreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/algorithms/search-algorithms/graph-search/breadth-first-search/RecursiveBreadthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Search/Graph Search/RecursiveDepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/algorithms/search-algorithms/graph-search/depth-first-search/RecursiveDepthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/algorithms/sort-algorithms/BubbleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/algorithms/sort-algorithms/InsertionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/algorithms/sort-algorithms/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/algorithms/sort-algorithms/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/algorithms/sort-algorithms/SelectionSort.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="31F3uTdFpQ5BA7LuOrq3knPLsJf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\Data Structures and Algorithms\java\algorithms\sort-algorithms" />
+      <recent name="E:\Projects\Data Structures and Algorithms\java\algorithms\search-algorithms\graph-search" />
+      <recent name="E:\Projects\Data Structures and Algorithms\java\algorithms\search-algorithms\graph-search\breadth-first-search" />
+      <recent name="E:\Projects\Data Structures and Algorithms\java\algorithms\search-algorithms\graph-search\depth-first-search" />
+      <recent name="E:\Projects\Data Structures and Algorithms\java\algorithms\search-algorithms\binary-search" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="995aa3b1-07a2-4b77-bb68-70d217e99720" name="Changes" comment="" />
+      <created>1755106216969</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1755106216969</updated>
+    </task>
+    <servers />
+  </component>
+</project>
