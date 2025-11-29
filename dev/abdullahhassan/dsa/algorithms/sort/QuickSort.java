@@ -44,6 +44,13 @@ public class  QuickSort {
         array[j]= temp;
     }
 
+    //Picks a random integer between min and max inclusive.
+    private static int pickRandom(int min,int max){
+        int range = max-min+1;
+        int random = (int)(Math.random()*range); //Math.random() returns double between 0.0 and 1.0
+        return min+random; //offset by min to make it [min,max]
+    }
+
     public static void sort(char[] array){
         quickSort(array, 0, array.length-1);
     }
@@ -84,12 +91,5 @@ public class  QuickSort {
         char temp = array[i];
         array[i]= array[j];
         array[j]= temp;
-    }
-
-    //Picks a random integer between min and max inclusive.
-    private static int pickRandom(int min,int max){
-        int range = max-min+1;
-        int random = (int)(Math.random()*range); //Math.random() returns double between 0.0 and 1.0
-        return min+random; //offset by min to make it [min,max]
     }
 }
