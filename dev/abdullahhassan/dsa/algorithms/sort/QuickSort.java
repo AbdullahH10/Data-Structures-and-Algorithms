@@ -15,8 +15,7 @@ public class  QuickSort {
     }
 
     private static int partition(int[] array, int left, int right){
-        int pivotIndex = left+(right-left)/2; //Assuming pivot is mid. Could also be random.
-        //int pivotIndex = left; //Assuming pivot is left.
+        int pivotIndex = pickRandom(left, right); //Picking a random pivot between [left,right]
         int pivot = array[pivotIndex]; //Saving pivot.
         swap(array,pivotIndex,right); //Swaping pivot to the righmost position.
 
@@ -35,7 +34,7 @@ public class  QuickSort {
         All values right to j is greater than pivot.
         Pivot is in sorted position which is called partitioning.
         */
-        swap(array,++j,right);
+        swap(array,j,right);
         return j;
     }
 
@@ -77,7 +76,7 @@ public class  QuickSort {
         All values right to j is greater than pivot.
         Pivot is in sorted position which is called partitioning.
         */
-        swap(array,++j,right);
+        swap(array,j,right);
         return j;
     }
 
@@ -85,5 +84,12 @@ public class  QuickSort {
         char temp = array[i];
         array[i]= array[j];
         array[j]= temp;
+    }
+
+    //Picks a random integer between min and max inclusive.
+    private static int pickRandom(int min,int max){
+        int range = max-min+1;
+        int random = (int)(Math.random()*range); //Math.random() returns double between 0.0 and 1.0
+        return min+random; //offset by min to make it [min,max]
     }
 }
