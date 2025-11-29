@@ -1,3 +1,5 @@
+package dev.abdullahhassan.dsa.algorithms.sort;
+
 public class BubbleSort {
     public static void sort(int[] array){
         for(int i=0;i<array.length-1;i++){

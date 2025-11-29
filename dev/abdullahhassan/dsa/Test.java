@@ -1,7 +1,11 @@
-import java.time.LocalDateTime;
+package dev.abdullahhassan.dsa;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import dev.abdullahhassan.dsa.algorithms.search.BinarySearch;
+import dev.abdullahhassan.dsa.algorithms.sort.*;
 
 public class Test {
     public static void main(String[] args) {
@@ -21,8 +25,8 @@ public class Test {
         charArray = new char[]{'j','c','e','g','i','a','d','b','f','h'};
         BubbleSort.sort(intArray);
         BubbleSort.sort(charArray);
-        System.out.println("Sorted: " + Arrays.toString(intArray));
-        System.out.println("Sorted: " + Arrays.toString(charArray));
+        System.out.println("Sorted by Bubble Sort: " + Arrays.toString(intArray));
+        System.out.println("Sorted by Bubble Sort: " + Arrays.toString(charArray));
         //END BubbleSort test
 
         //START InsertionSort test
@@ -30,8 +34,8 @@ public class Test {
         charArray = new char[]{'j','c','e','g','i','a','d','b','f','h'};
         InsertionSort.sort(intArray);
         InsertionSort.sort(charArray);
-        System.out.println("Sorted: " + Arrays.toString(intArray));
-        System.out.println("Sorted: " + Arrays.toString(charArray));
+        System.out.println("Sorted by Insertion Sort: " + Arrays.toString(intArray));
+        System.out.println("Sorted by Insertion Sort: " + Arrays.toString(charArray));
         //END InsertionSort test
 
         //START MergeSort test
@@ -39,8 +43,8 @@ public class Test {
         charArray = new char[]{'j','c','e','g','i','a','d','b','f','h'};
         MergeSort.sort(intArray);
         MergeSort.sort(charArray);
-        System.out.println("Sorted: " + Arrays.toString(intArray));
-        System.out.println("Sorted: " + Arrays.toString(charArray));
+        System.out.println("Sorted by Merge Sort: " + Arrays.toString(intArray));
+        System.out.println("Sorted by Merge Sort: " + Arrays.toString(charArray));
         //END MergeSort test
 
         //START QuickSort test
@@ -48,8 +52,8 @@ public class Test {
         charArray = new char[]{'j','c','e','g','i','a','d','b','f','h'};
         QuickSort.sort(intArray);
         QuickSort.sort(charArray);
-        System.out.println("Sorted: " + Arrays.toString(intArray));
-        System.out.println("Sorted: " + Arrays.toString(charArray));
+        System.out.println("Sorted by Quick Sort: " + Arrays.toString(intArray));
+        System.out.println("Sorted by Quick Sort: " + Arrays.toString(charArray));
         //END QuickSort test
 
         //START SelectionSort test
@@ -57,8 +61,8 @@ public class Test {
         charArray = new char[]{'j','c','e','g','i','a','d','b','f','h'};
         SelectionSort.sort(intArray);
         SelectionSort.sort(charArray);
-        System.out.println("Sorted: " + Arrays.toString(intArray));
-        System.out.println("Sorted: " + Arrays.toString(charArray));
+        System.out.println("Sorted by Selection Sort: " + Arrays.toString(intArray));
+        System.out.println("Sorted by Selection Sort: " + Arrays.toString(charArray));
         //END SelectionSort test
     }
 }

@@ -1,3 +1,5 @@
+package dev.abdullahhassan.dsa.algorithms.search;
+
 import java.util.List;
 
 public class BinarySearch {

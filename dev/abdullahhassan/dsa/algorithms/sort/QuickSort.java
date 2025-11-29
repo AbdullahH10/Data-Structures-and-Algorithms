@@ -1,3 +1,5 @@
+package dev.abdullahhassan.dsa.algorithms.sort;
+
 public class  QuickSort {
     public static void sort(int[] array){
         quickSort(array, 0, array.length-1);
