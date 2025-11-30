@@ -6,43 +6,43 @@ import java.util.List;
 import java.util.Map;
 
 public class Graph {
-    private Map<String,List<String>> adjacencies;
+    private Map<String,List<String>> adjacencyMap;
 
     public Graph(){
-        adjacencies = new HashMap<>();
+        adjacencyMap = new HashMap<>();
     }
 
     public Graph(List<Edge> edges){
-        adjacencies = new HashMap<>();
-        createAdjacencyList(edges);
+        adjacencyMap = new HashMap<>();
+        createAdjacencyMap(edges);
     }
 
-    public void createAdjacencyList(List<Edge> edges){
+    public void createAdjacencyMap(List<Edge> edges){
         for(Edge edge: edges){
             String start = edge.getStart();
             String end = edge.getEnd();
 
-            if(adjacencies.containsKey(start)){
-                adjacencies.get(start).add(end);
+            if(adjacencyMap.containsKey(start)){
+                adjacencyMap.get(start).add(end);
             }
             else{
                 ArrayList<String> neighbors = new ArrayList<>();
                 neighbors.add(end);
-                adjacencies.put(start, neighbors);
+                adjacencyMap.put(start, neighbors);
             }
 
-            if(adjacencies.containsKey(end)){
-                adjacencies.get(end).add(start);
+            if(adjacencyMap.containsKey(end)){
+                adjacencyMap.get(end).add(start);
             }
             else{
                 ArrayList<String> neighbors = new ArrayList<>();
                 neighbors.add(start);
-                adjacencies.put(end, neighbors);
+                adjacencyMap.put(end, neighbors);
             }
         }
     }
 
-    public Map<String,List<String>> getAdjacencyList(){
-        return this.adjacencies;
+    public Map<String,List<String>> getAdjacencyMap(){
+        return this.adjacencyMap;
     }
 }

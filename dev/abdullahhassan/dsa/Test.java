@@ -86,22 +86,40 @@ public class Test {
         //END building Graph with Nodes
 
         //START building Graph with Edges
+        ArrayList<Edge> edges = new ArrayList<>(List.of(
+            new Edge("Park", "City Council"),
+            new Edge("Park", "Grocery Shop"),
+            new Edge("Grocery Shop", "Cafe"),
+            new Edge("Cafe", "Library"),
+            new Edge("Library", "Restaurant"),
+            new Edge("Grocery Shop", "Butcher"),
+            new Edge("Cafe", "Bakery"),
+            new Edge("Library", "Bakery"),
+            new Edge("Restaurant", "Bakery"),
+            new Edge("Butcher", "Bakery"),
+            new Edge("City Council", "Restaurant")
+        ));
+        Graph graph = new Graph(edges);
         //END building Graph with Edges
 
         //START BreadthFirstSearch test
-        Node result = BreadthFirstSearch.search(park, "Library");
-        System.out.println("BFS: "+(result!=null?"Found "+result.getName():"Not found"));
+        String result = BreadthFirstSearch.search(park, "Library");
+        System.out.println("BFS: " + result);
         //END BreadthFirstSearch test
 
         //START DepthFirstSearch test
         result = BreadthFirstSearch.search(bakery, "Bank");
-        System.out.println("DFS: "+(result!=null?"Found "+result.getName():"Not found"));
+        System.out.println("DFS: " + result);
         //END DepthFirstSearch test
 
         //START BreadthFirstSearch test
+        result = BreadthFirstSearch.search(graph, "Park", "Library");
+        System.out.println("Recursive BFS: " + result);
         //END BreadthFirstSearch test
 
         //START DepthFirstSearch test
+        result = DepthFirstSearch.search(graph, "Park", "Bank");
+        System.out.println("Recursive DFS: " + result);
         //END DepthFirstSearch test
     }
 }
